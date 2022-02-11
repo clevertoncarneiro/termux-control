@@ -3,6 +3,9 @@ import os
 import logging
 
 
+MINUTES_SLEEP = 15 * 60 # 15 minutes
+
+
 if __name__ == "__main__":
     while True:
         try:
@@ -12,8 +15,10 @@ if __name__ == "__main__":
                 os.system('termux-wifi-enable false')
                 sleep(10)
                 os.system('termux-wifi-enable true')
+                sleep(20)
+            else:
+                sleep(MINUTES_SLEEP) 
         except Exception as e:
             logging.error(e)
+            sleep(10)
             continue
-        finally:
-            sleep(15 * 60) # 15 minutes
