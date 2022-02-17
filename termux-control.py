@@ -13,7 +13,7 @@ def get_battery():
 
     string_to_find = '"percentage":'
     start = output.find(string_to_find) + len(string_to_find)
-    end = output[start:].find(',')
+    end = start + output[start:].find(',')
 
     percentage = output[start:end].strip()
     return percentage
