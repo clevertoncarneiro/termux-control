@@ -3,7 +3,7 @@ import os
 import logging
 
 
-MINUTES_SLEEP = 15 * 60 # 15 minutes
+MINUTES_SLEEP = 5 * 60 # 15 minutes
 
 
 if __name__ == "__main__":
